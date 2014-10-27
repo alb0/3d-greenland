@@ -1,0 +1,24 @@
+difference(){
+difference(){
+difference(){
+difference(){
+
+	difference(){
+		difference(){
+			import("/Users/icepodmacpro/Documents/3DGreenland/FINAL GREENLAND 3D PRINT/GrIS_icesfc_20th_polymask.stl");
+			import("/Users/icepodmacpro/Documents/3DGreenland/FINAL GREENLAND 3D PRINT/GrIS_bed_20th_polymask.stl");
+							}
+translate([0,0,-20]) difference(){
+scale([1,1,2])import("/Volumes/VARIANT/coastline_volume.stl");
+translate([-5,-5,-10]) cube(size=[150,240,15]);
+									}
+							}
+
+translate([0,219,-5])cube(size=[180,2,15]);
+}
+translate([0,-1,-5])cube(size=[180,2,15]);
+}
+translate([-1,0,-5])cube(size=[2,240,15]);
+}
+translate([122,0,-5])cube(size=[2,240,15]);
+}
