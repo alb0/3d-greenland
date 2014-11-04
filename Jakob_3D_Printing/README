@@ -1,0 +1,14 @@
+Files in this directory created as part of the Hackathon. They should be close
+to what is needed for 3D printing of the Jakobshavn's Isbrea region of West
+Central Greenland. See the modified README on the github site for a description
+of the process used to create the files. Essentially it is:
+
+Download netcdf -> Import into QGIS -> Save black and white images of surface
+and bed -> convert to stl with hmstl -> difference and intersections with
+OpenSCAD (Alex)
+
+All .png and .stl files are here, except for the thickness of ice file, which
+would rest on the bedrock. Note jakobshavns_bed_colors.png is a suggested file
+for applying colors to the bed model.
+
+
