@@ -1,7 +1,13 @@
 3d-greenland
 ============
 
-Data and code for producing 3D models.
+Data, code, workflows, and notes for producing 3D models. 
+
+First, some history and background.  This project began in 2014, printing the Greenland Ice Sheet's bathymetry/sub-ice topography as well as the ice surface from raster data.  These datasets have since been updated, but the type remains the same: GeoTiff or NetCDF files containing rasters of elevation data. 
+
+The original workflows are recorded in this poster that was presented at the American Geophysical Union Fall Meeting in 2014 (below).  Many different programs were used, some open source and others not. An MakerBot printer was the primary machine used for testing, but the main print was made by a company with a laser-scintering machine that enabled detailed color mapping and higher resolution prints.
+
+
 
 Data Preperation
 ----------------
