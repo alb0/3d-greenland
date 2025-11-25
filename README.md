@@ -9,7 +9,7 @@ The original workflows are best recorded in this poster that was presented at th
 
 Many different programs were used, some open source and others not. An MakerBot printer was the primary machine used for testing, but another high-quality print was made by a company with a laser-scintering machine that enabled detailed color mapping and higher resolution prints.
 
-This was also a topic of discussion at the NSF Polar Cyberinfrastructure Hackathon in NYC in 2015, with additional prints made: https://nsf-polar-cyberinfrastructure.github.io/datavis-hackathon/
+This was also a topic of discussion at the ![NSF Polar Cyberinfrastructure Hackathon in NYC](https://nsf-polar-cyberinfrastructure.github.io/datavis-hackathon/) in 2015, with additional prints made: .  The notes workflows that resulted from that session are ![here](https://github.com/alb0/3d-greenland/blob/master/Post-NSF-Polar-Cyber-DataViz-Hackathon).  Caution to the reader: these are unlikely to be sufficient to recreate any models. 
 
 
 
