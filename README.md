@@ -4,7 +4,7 @@ This describes data, code, workflows, and notes for producing 3D models of polar
 
 The name of the repo should probably be changed, but you have been warned. 
 
-## History and Background 
+## History, Background, and Files
 
 This project began in ~2012, printing the Greenland Ice Sheet's bathymetry/sub-ice topography as well as the ice surface from raster data. A few other types of models and prints were explored, but the main thrust of the work was and has been to create two-piece ice-sheet models where the ice sheet is removable and fits on top of a bedrock and bathrymetry model. The bathymetry/topography datasets have since been updated, but the type remains the same: GeoTiff or NetCDF files containing rasters of elevation data. 
 
@@ -17,6 +17,12 @@ This was also a topic of discussion at the ![NSF Polar Cyberinfrastructure Hacka
 
 Since these models were made, the original STL files have been modified by others and used for education and outreach purposes in Greenland. Links and resources to follow. 
 
+### Files and Folders in this Repo
+- photos contains photos of 3D prints
+- Jakob_3D_Printing contains images, a readme, and stl files for printing a two-piece model of the ice surface and bed near Jakobshavn
+- zMapToSTL contains Matlab files for creating STL files from raster elevation datasets
+- Other files 
+-  
 ## Improvements and Future Work
 
 **Attempts to recreate the above models have been unsuccessful.** 
