@@ -1,68 +1,35 @@
-3d-greenland
-============
+# 3d-greenland Introduction
 
-Data, code, workflows, and notes for producing 3D models. 
+This describes data, code, workflows, and notes for producing 3D models of polar data. Mostly pertaining to Greenland topography, you'll find additional files here for Antarctica and other types of data.  
 
-First, some history and background.  This project began in ~2012, printing the Greenland Ice Sheet's bathymetry/sub-ice topography as well as the ice surface from raster data.  These datasets have since been updated, but the type remains the same: GeoTiff or NetCDF files containing rasters of elevation data. 
+The name of the repo should probably be changed, but you have been warned. 
 
-The original workflows are best recorded in this poster that was presented at the American Geophysical Union Fall Meeting in 2014 ![below](https://github.com/alb0/3d-greenland/blob/master/3DPrintingPoster_v2.pdf).
+## History and Background 
 
-Many different programs were used, some open source and others not. An MakerBot printer was the primary machine used for testing, but another high-quality print was made by a company with a laser-scintering machine that enabled detailed color mapping and higher resolution prints.
+This project began in ~2012, printing the Greenland Ice Sheet's bathymetry/sub-ice topography as well as the ice surface from raster data. A few other types of models and prints were explored, but the main thrust of the work was and has been to create two-piece ice-sheet models where the ice sheet is removable and fits on top of a bedrock and bathrymetry model. The bathymetry/topography datasets have since been updated, but the type remains the same: GeoTiff or NetCDF files containing rasters of elevation data. 
 
-This was also a topic of discussion at the ![NSF Polar Cyberinfrastructure Hackathon in NYC](https://nsf-polar-cyberinfrastructure.github.io/datavis-hackathon/) in 2015, with additional prints made: .  The notes workflows that resulted from that session are ![here](https://github.com/alb0/3d-greenland/blob/master/Post-NSF-Polar-Cyber-DataViz-Hackathon).  Caution to the reader: these are unlikely to be sufficient to recreate any models. 
+The original workflows are best recorded in this poster that was presented at the American Geophysical Union Fall Meeting in 2014 ![linked here](https://github.com/alb0/3d-greenland/blob/master/3DPrintingPoster_v2.pdf). Many different programs were used, some open source and others not. An MakerBot printer was the primary machine used for testing, but another high-quality print was made by a company with a laser-scintering machine that enabled detailed color mapping and higher resolution prints. See below:
 
+![test](https://github.com/alb0/3d-greenland/blob/master/photos/greenland2.jpeg)
+![test](https://github.com/alb0/3d-greenland/blob/master/photos/greenland3.jpeg)
 
+This was also a topic of discussion at the ![NSF Polar Cyberinfrastructure Hackathon in NYC](https://nsf-polar-cyberinfrastructure.github.io/datavis-hackathon/) in 2015, with additional prints made. The notes workflows that resulted from that session are ![here](https://github.com/alb0/3d-greenland/blob/master/Post-NSF-Polar-Cyber-DataViz-Hackathon).  Caution to the reader: these are unlikely to be sufficient to recreate any models. 
 
-Data Preperation
-----------------
+Since these models were made, the original STL files have been modified by others and used for education and outreach purposes in Greenland. Links and resources to follow. 
 
+## Improvements and Future Work
 
-Some notes on a process for creating the .STL files from polar datasets. Generated during the dataviz hackathon 11/3-4/2014.
+**Attempts to recreate the above models have been unsuccessful.** 
 
-A process that can be followed uses what are called "height-maps". The idea is to obtain grey scale images (.png) of the bed and surface of the region of interest. Having these images, a short C program can be run to produce the corresponding STL file.
+A list of issues to fix and goals to pursue:
 
-Getting the data
-----------------
+- A new workflow must be created using entirely free/open-source software
+- The above model should be improved
+- - Better resolution and smoothing 
+  - Better fit between surface and base
+  - Cleaned up edges on the surface
+- Make a model of Antarctica (this may be challening due to the size, presence of floating ice, etc.)
 
-Begin by downloading and appropriate data set providing bed and surface elevation. A quick option is to take these from the SeaRISE data sets, located here:
-
-http://websrv.cs.umt.edu/isis/images/a/a5/Greenland_5km_v1.1.nc
-
-Saving a  grayscale .png
-------------------------
-
-These netcdf files can be challenging for a new comer to work with. One way of doing it is to load the data into a program like Q-GIS in order to view it. ncview is also popular. Here, I explain the steps for saving the .png from QGIS.
-
-* Open QGIS
-* Import the netcdf file containing the data as a raster. This is done with the icon that looks like a small chessboard with a plus on it. It is located on the left side of the screen.
-* Select the rasters to import.
-* Display, zoom, and refine the region that you are planning to print. Double click the raster in the left panel to alter the mapping of values to gray colors. Look closely at the bottom of this dialog box, when "Style" is selected on the left. The resampling technique should probably be bilinear of cubic in order to get the desired effect.
-* Once the desired region is displayed with appropriate dynamic range in grayscale, and with appropriate resampling technique, save it as a .png file though the "Save as image..." dialog under the File menu.
-
-Converting the .png to an .stl
-------------------------------
-
-Download, and install libtrix:
-
-https://github.com/anoved/libtrix
-
-with
-
-make
-sudo make install
-
-Then build hmstl:
-
-https://github.com/anoved/hmstl
-
-with:
-
-make
-
-Use hmstl to create the .stl file from the .png. The README file has many examples, but it is mostly just a matter of:
-
-./hmstl -z <RESCALE Z> -i <INPUT FILE>.png -o <OUTPUT FILE>.stl
-
-It is also possible to include a mask, see the REAME.
+### Developing the workflow to recreate Greenland model:
 
 
