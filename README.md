@@ -22,7 +22,7 @@ Since these models were made, the original STL files have been modified by other
 - Jakob_3D_Printing contains images, a readme, and stl files for printing a two-piece model of the ice surface and bed near Jakobshavn
 - zMapToSTL contains Matlab files for creating STL files from raster elevation datasets
 - Other files 
--  
+- 2025-26 3D Greenland contains a Python script and data to make STL files of the Greenland ice surface and base from DEMs
 ## Improvements and Future Work
 
 **Attempts to recreate the above models have been unsuccessful.** 
